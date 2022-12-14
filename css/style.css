@@ -14,3 +14,9 @@
 #button-inclusao {
     margin-bottom: 10px;
 }
+
+#bonus:hover {
+    background-color:darkgray;
+    color: white;
+    transition: 0.1s;
+}

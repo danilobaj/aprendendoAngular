@@ -20,49 +20,50 @@
             <h1>{{titulo}}</h1>
             <p>Aprendendo Angular</p>
         </div>
-    <button class="btn btn-primary btn-lg" id="button-ajax" ng-disabled="carregandoPessoas" ng-click="exibirFormularioInclusao = true">Incluir pessoa</button>
-    <div class="panel panel-default" id="container-inclusao" ng-show="exibirFormularioInclusao">
-        <div class="panel-heading">Inclusão de pessoa</div>
-        <div class="panel-body">
-            <div class="form-group">
-                <label>Nome:</label>
-                <input type="text" ng-model="formInclusao.nome"/>
-            </div>
-            <div class="form-group">
-                <label>Idade:</label>
-                <input type="text" ng-model="formInclusao.idade"/>
-            </div>
-            <div class="form-group">
-                <label>País:</label>
-                <input type="text" ng-model="formInclusao.pais"/>
-            </div>
-            <div class="form-group">
-                <button class="btn btn-default" ng-click="incluirPessoa();">Incluir</button>
-            </div>
+        <div>
+            <button class="btn btn-primary btn-lg" id="button-inclusao" ng-click="exibirFormularioInclusao = true">Incluir pessoa</button>
+            <button class="btn btn-primary btn-lg" id="button-ajax" ng-disabled="carregandoPessoas" ng-click="carregarPessoas()">Carregar pessoas Ajax</button>
         </div>
-    </div>
-    <button class="btn btn-primary btn-lg" id="button-ajax" ng-disabled="carregandoPessoas" ng-click="carregarPessoas()">Carregar pessoas Ajax</button>
-    <div class="panel panel-default">
-        <div class="panel-heading">{{ nomeListaPessoas }}</div>
-        <div class="panel-body">
-           <ul>
-            <li ng-repeat="pessoa in listaPessoas">
-                <div class="panel panel-default">
-                    <div class="panel-heading"> {{ pessoa.nome}} </div>
-                        <div class="panel-body">
-                            <ul>
-                                <li>Idade: {{ pessoa.idade }}</li>
-                                <li>Pais: {{ pessoa.pais }}</li>
-                            </ul>
-                                <button ng-click="excluirPessoa(pessoa.nome);">Excluir</button>
-                        </div>
+        <div class="panel panel-default" id="container-inclusao" ng-show="exibirFormularioInclusao">
+            <div class="panel-heading">Inclusão de pessoa</div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label>Nome:</label>
+                    <input type="text" ng-model="formInclusao.nome"/>
                 </div>
-            </li>
-           </ul>
+                <div class="form-group">
+                    <label>Idade:</label>
+                    <input type="text" ng-model="formInclusao.idade"/>
+                </div>
+                <div class="form-group">
+                    <label>País:</label>
+                    <input type="text" ng-model="formInclusao.pais"/>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-default" ng-click="incluirPessoa();">Incluir</button>
+                </div>
+            </div>
         </div>
-    </div>
-
-
+        <div class="panel panel-default">
+            <div class="panel-heading">{{ nomeListaPessoas }}</div>
+            <div class="panel-body">
+            <ul>
+                <li ng-repeat="pessoa in listaPessoas">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"> {{ pessoa.nome}} </div>
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Idade: {{ pessoa.idade }}</li>
+                                    <li>Pais: {{ pessoa.pais }}</li>
+                                </ul>
+                                <button ng-click="excluirPessoa(pessoa.nome);">Excluir</button>
+                            </div>
+                    </div>
+                </li>
+            </ul>
+            </div>
+        </div>
+    <button class="btn btn-default" id="bonus"><a id="bonus" href="indexCurso.html">Pagina bonus Ajax</a></button>
 
 </body>
 </html>

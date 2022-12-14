@@ -1,6 +1,6 @@
 angular.module('Aula',[]).controller('PrimeiroController', function($scope, $http){
 
-            $scope.titulo = 'Angular'
+            $scope.titulo = 'Aula Angular'
 
             $scope.formInclusao = {
                                     "nome" : "",

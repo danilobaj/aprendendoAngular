@@ -1,0 +1,16 @@
+.conteiner {
+    text-align: center;
+}
+
+.form-group label {
+    width: 50px;
+
+}
+
+#button-ajax {
+    margin-bottom: 10px;
+}
+
+#button-inclusao {
+    margin-bottom: 10px;
+}
